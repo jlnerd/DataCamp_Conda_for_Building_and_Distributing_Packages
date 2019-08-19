@@ -11,7 +11,7 @@ $ mkdir mortgage_rates
 $ cd mortgage_rates/
 $ anaconda-project init # Initialize the Anaconda Project specification
 $ nano /home/repl/mortgage_rates/anaconda-project.yml # Edit the anaconda-project.yml file to add a description of the project. 
-# Use whatever description you want
+# Insert whatever description you want
 ```
 
 ## Add packages and commands
@@ -21,4 +21,14 @@ All other dependencies of these packages, like NumPy and Scipy will be installed
 $ anaconda-project add-packages python=3
 $ anaconda-project add-packages pandas
 $ anaconda-project add-packages statsmodels
+```
+
+Now it's time to add the URL to download the 30-year mortgage rates. In a project, files are downloaded automatically when a command is run. A download is defined through the add-download command which takes two arguments.
+
+```
+$ anaconda-project add-download <ENV_VARIABLE> <DOWNLOAD_URL>
+```
+Here, we add a download for https://goo.gl/jpbAsR with the variable name ```MORTGAGE_RATES```
+```
+$anaconda-project add-download MORTGAGE_RATES https://goo.gl/jpbAsR
 ```
