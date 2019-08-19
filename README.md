@@ -9,4 +9,5 @@ We will be creating a project called ```mortgage_rates```. All lines which begin
 ```
 $ mkdir mortgage_rates
 $ cd mortgage_rates/
+$ anaconda-project init # Initialize the Anaconda Project specification using the following command:
 ```
