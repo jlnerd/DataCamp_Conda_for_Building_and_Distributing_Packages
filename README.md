@@ -10,7 +10,8 @@ We will be creating a project called ```mortgage_rates```. All lines which begin
 $ mkdir mortgage_rates
 $ cd mortgage_rates/
 $ anaconda-project init # Initialize the Anaconda Project specification
-$ nano /home/repl/mortgage_rates/anaconda-project.yml # Edit the anaconda-project.yml file to add a description of the project. Use whatever description you want
+$ nano /home/repl/mortgage_rates/anaconda-project.yml # Edit the anaconda-project.yml file to add a description of the project. 
+# Use whatever description you want
 ```
 
 ## Add packages and commands
