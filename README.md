@@ -6,6 +6,7 @@ This readme highlights the key steps/processes to creating a python package via 
 
 ## Initialize a New Project
 We will be creating a project called ```mortgage_rates```. All lines which begin with ```$``` indicated command line interface (CLI) commands
-```$ mkdir mortgage_rates
+```
+$ mkdir mortgage_rates
 $ cd mortgage_rates/
 ```
