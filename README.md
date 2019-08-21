@@ -30,5 +30,24 @@ $ anaconda-project add-download <ENV_VARIABLE> <DOWNLOAD_URL>
 ```
 Here, we add a download for https://goo.gl/jpbAsR with the variable name ```MORTGAGE_RATES```
 ```
-$anaconda-project add-download MORTGAGE_RATES https://goo.gl/jpbAsR
+$ anaconda-project add-download MORTGAGE_RATES https://goo.gl/jpbAsR
 ```
+
+To add a command to run a script, we execute the following line:
+```
+$ anaconda-project add-command [flags] <name> <command-to-execute>
+```
+
+## Locking Package Versions
+Use ```anaconda-project lock``` to write the current versions of every package, including low-level dependencies, for the Mac, Linux, and Windows platforms to the anaconda-project-lock.yml file so that other users can exactly recreate the environment as you were using today.
+
+## Sharing Your Project
+Below, we create a compressed project archive and share it on Anaconda Cloud.
+First, we archive the ```mortgage_rates``` project with the command:
+```$ anaconda-project archive <zip-file>```
+where ```<zip-file>``` is the path to the zip file of interest.
+
+Next, logon to anaconda using ```$ anaconda login```
+
+Finally, upload the archive.
+```$ anaconda upload <zip-file> --package-type=project```
