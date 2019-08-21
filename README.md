@@ -50,4 +50,6 @@ where ```<zip-file>``` is the path to the zip file of interest.
 Next, logon to anaconda using ```$ anaconda login```
 
 Finally, upload the archive.
-```$ anaconda upload <zip-file> --package-type=project```
+```
+$ anaconda upload <zip-file> --package-type=project
+```
