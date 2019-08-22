@@ -43,6 +43,7 @@ Use ```anaconda-project lock``` to write the current versions of every package, 
 
 ## Sharing Your Project
 Below, we create a compressed project archive and share it on Anaconda Cloud.
+
 First, we archive the ```mortgage_rates``` project with the command:
 ```$ anaconda-project archive <zip-file>```
 where ```<zip-file>``` is the path to the zip file of interest.
@@ -53,3 +54,44 @@ Finally, upload the archive.
 ```
 $ anaconda upload <zip-file> --package-type=project
 ```
+
+
+## Meta.yaml
+A typical meta.yaml file is shown below:
+```
+{% set setup_py = load_setup_py_data() %}
+
+package:
+    name: 'mortgage_forecasts'
+    version: {{ setup_py.get('version') }}
+
+source:
+    path: ./
+
+build:
+    script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+    run:
+        - python
+        - scipy
+        - numpy 1.11*
+        - matplotlib >=1.5, <2.0
+
+    build:
+        # Packages used by setup.py
+        # to install this package.
+        # May also install compilers
+        # for non-python code.
+        - python
+        - setuptools
+
+about:
+    license: {{ setup_py.get('license') }}
+    license_file: LICENSE
+    summary: {{ setup_py.get('description') }}
+```
+Read the meta.yaml documentation for more details.
+
+
+## Buld the Conda Package
